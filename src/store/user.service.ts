@@ -62,11 +62,6 @@ export const SignIn = async ({
   password: string;
 }) => {
   await signIn("credentials", { email, password, redirectTo: "/home" });
-  // try {
-  //   console.log(email, password);
-  // } catch (error) {
-  //   console.log(error);
-  // }
 };
 
 export const SignUp = async (values: {
@@ -106,7 +101,10 @@ export const getUserById = async ({
 }: {
   id: string;
 }): Promise<User | null> => {
+  console.log("id", id);
   const user = await prisma.user.findFirst({ where: { id } });
+  console.log(user);
+
   return user;
 };
 
@@ -125,5 +123,4 @@ export const updateUser = async ({ values }: { values: UserInfo }) => {
   } catch (error) {
     console.log(error);
   }
-  console.log(values);
 };

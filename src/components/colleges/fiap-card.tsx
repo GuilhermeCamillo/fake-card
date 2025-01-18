@@ -81,13 +81,13 @@ const FiapCard = ({ user }: { user: User }) => {
           {turn ? (
             <div className="flex flex-col h-full bg-black mb-12 rounded-[16px] items-center justify-center gap-6">
               <div className="w-2/4">
-                {user.imageUrl ? (
+                {user?.imageUrl ? (
                   <Image
                     className="w-[190px] h-[190px] rotate-90 rounded-full"
                     height={160}
                     width={160}
                     priority={true}
-                    src="https://media.discordapp.net/attachments/1003715666706186302/1268672731520438404/31a775b7-2d4b-4f8d-830b-7a9a45e34f5a.png?ex=67710dcd&is=676fbc4d&hm=5d55f3c96bbb8f0de1ae6e99e05313bc57068393cc98284872b196b0d2dfaccd&=&format=webp&quality=lossless&width=351&height=468"
+                    src={user.imageUrl}
                     alt="card photo"
                   />
                 ) : (

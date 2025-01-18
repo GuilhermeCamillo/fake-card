@@ -6,7 +6,7 @@ import AnhembiCard from "@/components/colleges/anhembi-card";
 
 const Page = async ({ params }: { params: Promise<{ college: string }> }) => {
   const session = await auth();
-  const user = await getUserById(session?.user?.id);
+  const user = await getUserById({ id: session?.user?.id });
 
   if (!user) {
     return;

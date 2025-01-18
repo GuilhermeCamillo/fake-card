@@ -49,13 +49,13 @@ const AnhembiCard = ({ user }: { user: User }) => {
                       <Card className="bg-[#0ca788]">
                         <CardContent className="flex flex-col aspect-video p-2">
                           <div className="flex flex-row justify-between h-[50%] p-2">
-                            {user.imageUrl ? (
+                            {user?.imageUrl ? (
                               <Image
                                 className="w-[65px] h-[65px] rounded-full"
                                 height={65}
                                 width={65}
                                 priority={true}
-                                src="https://media.discordapp.net/attachments/1003715666706186302/1268672731520438404/31a775b7-2d4b-4f8d-830b-7a9a45e34f5a.png?ex=67710dcd&is=676fbc4d&hm=5d55f3c96bbb8f0de1ae6e99e05313bc57068393cc98284872b196b0d2dfaccd&=&format=webp&quality=lossless&width=351&height=468"
+                                src={user.imageUrl}
                                 alt="card photo"
                               />
                             ) : (

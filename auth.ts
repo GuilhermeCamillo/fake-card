@@ -26,7 +26,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           email as string,
           password as string
         );
-        console.log(response);
 
         if (response.success) {
           return response.data as User;
