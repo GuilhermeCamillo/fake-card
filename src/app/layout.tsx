@@ -12,6 +12,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "5415321656321",
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({

@@ -101,9 +101,7 @@ export const getUserById = async ({
 }: {
   id: string;
 }): Promise<User | null> => {
-  console.log("id", id);
   const user = await prisma.user.findFirst({ where: { id } });
-  console.log(user);
 
   return user;
 };
